@@ -26,11 +26,11 @@ namespace Demo.UITests
         }
 
         [Test]
-        public void WelcomeTextIsDisplayed()
+        public void TrelloCardsDisplayed()
         {
-            AppResult[] results = app.WaitForElement(c => c.Marked("Welcome to Xamarin Forms!"));
-            app.Screenshot("Welcome screen.");
-
+            app.WaitForElement(c => c.Text("Get Cards"));
+            app.Tap(c => c.Text("Get Cards"));
+            AppResult[] results = app.WaitForElement(c => c.Text("Test Card"));
             Assert.IsTrue(results.Any());
         }
     }
