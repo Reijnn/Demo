@@ -6,6 +6,7 @@ using Xamarin.Forms;
 
 namespace Demo {
     public partial class DemoPage : ContentPage {
+
         private TrelloItem item { get; set; } = null;
         public DemoPage() {
             InitializeComponent();
